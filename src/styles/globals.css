@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter text-text-primary bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-rubik;
+  }
+}
+
+@layer components {
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgba(107, 33, 168, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .pattern-dots-light {
+    background-image: radial-gradient(circle, rgba(234, 179, 8, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .pattern-grid {
+    background-image: 
+      linear-gradient(rgba(107, 33, 168, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(107, 33, 168, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .pattern-waves {
+    background-image: 
+      radial-gradient(ellipse at 20% 50%, rgba(107, 33, 168, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 50%, rgba(234, 179, 8, 0.08) 0%, transparent 50%);
+  }
+
+  .card-shadow {
+    box-shadow: 0 4px 20px rgba(107, 33, 168, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-shadow-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-shadow-hover:hover {
+    box-shadow: 0 10px 40px rgba(107, 33, 168, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white font-rubik font-semibold px-6 py-3 rounded-none
+           transition-all duration-300 hover:bg-primary-dark hover:shadow-lg
+           active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-text-primary font-rubik font-semibold px-6 py-3 rounded-none
+           transition-all duration-300 hover:bg-secondary-dark hover:shadow-lg
+           active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-rubik font-semibold px-6 py-3 rounded-none
+           transition-all duration-300 hover:bg-primary hover:text-white
+           active:scale-95;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto;
+  }
+
+  .section-title {
+    @apply font-rubik text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6;
+  }
+
+  .section-subtitle {
+    @apply font-inter text-lg md:text-xl text-text-secondary max-w-3xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Animaciones personalizadas */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6B21A8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4C1D95;
+}

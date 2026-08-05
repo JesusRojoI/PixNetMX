@@ -1,0 +1,60 @@
+import type { Metadata } from 'next';
+import '@/styles/globals.css';
+import LanguageProvider from '@/contexts/LanguageProvider';
+import { CartProvider } from '@/contexts/CartContext';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import { Toaster } from 'react-hot-toast';
+
+export const metadata: Metadata = {
+  title: 'PixNetMX - Soluciones de Software Innovadoras',
+  description: 'Transformando ideas en software excepcional. Desarrollo web, aplicaciones móviles, diseño UX/UI e integración tecnológica.',
+  keywords: 'desarrollo web, aplicaciones móviles, UX/UI, software, PixNetMX',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="es" suppressHydrationWarning>
+      <body className="font-inter antialiased" suppressHydrationWarning>
+        <LanguageProvider>
+          <CartProvider>
+            <Header />
+            <main className="min-h-screen">
+              {children}
+            </main>
+            <Footer />
+            <Toaster
+              position="top-right"
+              toastOptions={{
+                duration: 5000,
+                style: {
+                  background: '#1E1B4B',
+                  color: '#fff',
+                  fontFamily: 'Inter, sans-serif',
+                },
+                success: {
+                  duration: 5000,
+                  iconTheme: {
+                    primary: '#EAB308',
+                    secondary: '#1E1B4B',
+                  },
+                },
+                error: {
+                  duration: 5000,
+                  iconTheme: {
+                    primary: '#EF4444',
+                    secondary: '#1E1B4B',
+                  },
+                },
+              }}
+            />
+          </CartProvider>
+        </LanguageProvider>
+      </body>
+    </html>
+  );
+}
