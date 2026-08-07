@@ -7,80 +7,80 @@
     "cart": "Carrito"
   },
   "footer": {
-  "description": "Transformando ideas en software excepcional.",
-  "legalTitle": "Legal",
-  "privacy": "Aviso de Privacidad",
-  "terms": "Términos y Condiciones",
-  "refund": "Política de Reembolsos y Devoluciones",
-  "contactTitle": "Contacto",
-  "email": "equipo@pixnetmx.com",
-  "phone": "55 5547 3881",
-  "location": "CDMX, México",
-  "rights": "Todos los derechos reservados."
-},
+    "description": "Convirtiendo conceptos en software de alto nivel.",
+    "legalTitle": "Legal",
+    "privacy": "Aviso de Privacidad",
+    "terms": "Términos y Condiciones",
+    "refund": "Política de Reembolsos y Devoluciones",
+    "contactTitle": "Contacto",
+    "email": "equipo@pixnetmx.com",
+    "phone": "55 5547 3881",
+    "location": "CDMX, México",
+    "rights": "Todos los derechos reservados."
+  },
   "home": {
     "hero": {
-      "title": "Transformando ideas en software excepcional",
-      "subtitle": "En PixNetMX, diseñamos y desarrollamos soluciones de software innovadoras que impulsan tu negocio hacia el futuro.",
+      "title": "Convertimos tus ideas en software de primer nivel",
+      "subtitle": "En PixNetMX creamos y desarrollamos soluciones tecnológicas que proyectan tu negocio hacia el futuro digital.",
       "cta": "Nuestras soluciones"
     },
     "services": {
       "title": "Nuestros servicios",
       "websiteDesign": "Website Design",
-      "websiteDesignDesc": "Diseñamos todo tipo de plataforma y página web, desde landings hasta sitios corporativos, sitios promocionales y mucho más.",
-      "websiteDesignFull": "Tu sitio web es tu activo digital más importante. En PixNetMX, vamos más allá de lo estético: diseñamos experiencias digitales que cautivan a tus visitantes y los guían hacia la acción.",
+      "websiteDesignDesc": "Creamos sitios web y plataformas de toda clase: landings, portales corporativos, páginas promocionales y más.",
+      "websiteDesignFull": "Tu página web representa el corazón de tu presencia digital. En PixNetMX superamos la apariencia para crear vivencias interactivas que atrapan a tus visitantes y los conducen a actuar.",
       "styleGuide": "Manual de estilos",
-      "styleGuideDesc": "Antes de construir tu plataforma, construimos tu identidad web. En PixNetMX entendemos que tu identidad visual es importante, por ello creamos un manual de estilos para homologar todas tus plataformas y software.",
+      "styleGuideDesc": "Previo al desarrollo, forjamos tu identidad digital. Sabemos que tu imagen visual es clave, así que elaboramos una guía de estilo para unificar todas tus plataformas y aplicaciones.",
       "contentStrategy": "Estrategia de contenidos",
-      "contentStrategyDesc": "El mejor software del mundo necesita ser encontrado. En PixNetMX, nuestro servicio de Estrategia de Contenido se enfoca en convertir a tu empresa en una autoridad de pensamiento dentro del sector tecnológico.",
+      "contentStrategyDesc": "Hasta el software más potente necesita visibilidad. Nuestra estrategia de contenido busca posicionar a tu empresa como referente de conocimiento en la industria tecnológica.",
       "webDev": "Website & App Development",
-      "webDevDesc": "También desarrollamos todo tipo de plataformas web y aplicaciones móviles, si ya tienes un diseño podemos convertirlo en realidad.",
+      "webDevDesc": "Desarrollamos plataformas web y apps móviles de cualquier tipo. Si cuentas con un diseño previo, lo transformamos en un producto funcional.",
       "customCreation": "Creación desde cero",
-      "customCreationDesc": "Cuando las soluciones genéricas se quedan cortas, necesitas una herramienta diseñada exclusivamente para ti. Nos especializamos en la creación de software personalizado desde cero, garantizando que cada función y cada línea de código esté alineada con tus procesos de negocio y visión de futuro.",
+      "customCreationDesc": "Cuando las opciones estándar resultan insuficientes, requieres una solución hecha a tu medida. Somos expertos en desarrollar software personalizado, cuidando que cada funcionalidad y línea de código responda a tus operaciones y metas futuras.",
       "premadeTemplate": "Choose a Premade Template",
-      "premadeTemplateDesc": "La solución ideal para negocios que requieren una plataforma de alta calidad sin el tiempo o la inversión de un desarrollo 100% a medida. Seleccionamos, personalizamos e implementamos plantillas y frameworks de primera línea, probados y optimizados para el rendimiento. Obtienes lo mejor de ambos mundos: velocidad de implementación con la calidad técnica y la optimización de PixNetMX.",
+      "premadeTemplateDesc": "Perfecto para negocios que buscan una plataforma profesional sin invertir el tiempo y costo de un proyecto enteramente personalizado. Escogemos, adaptamos e instalamos plantillas premium, verificadas y afinadas para un desempeño óptimo. Combinas la rapidez de entrega con el rigor técnico de PixNetMX.",
       "maintenance": "Mantenimiento y Actualizaciones",
-      "maintenanceDesc": "El lanzamiento exitoso de tu software es solo el comienzo. En PixNetMX, ofrecemos un servicio integral de Mantenimiento y Soporte para garantizar que tus aplicaciones sigan siendo rápidas, seguras y relevantes a medida que la tecnología evoluciona."
+      "maintenanceDesc": "Poner tu software en marcha es apenas el principio. Brindamos un servicio completo de mantenimiento y asistencia para que tus aplicaciones se conserven veloces, protegidas y actualizadas conforme avanza la tecnología."
     },
     "about": {
       "title": "Quienes Somos",
-      "content": "En PixNetMX somos una empresa especializada en soluciones digitales a la medida, enfocada en el desarrollo web, aplicaciones móviles, diseño UX/UI e integración tecnológica. Nuestro compromiso es ayudar a empresas, emprendedores y marcas a construir su presencia digital, optimizar sus procesos y conectar de manera efectiva con sus clientes. Nos distinguimos por ofrecer desde landing pages accesibles y funcionales, hasta plataformas web y aplicaciones móviles robustas, adaptándonos a cada necesidad y presupuesto."
+      "content": "PixNetMX es una firma orientada a soluciones digitales personalizadas, con foco en creación web, apps móviles, experiencia de usuario e integración de sistemas. Ayudamos a compañías, emprendedores y marcas a edificar su imagen digital, hacer más eficientes sus procesos y vincularse eficazmente con su audiencia. Nos caracteriza brindar desde landings económicas y operativas hasta aplicaciones robustas, siempre ajustándonos a cada requerimiento y alcance financiero."
     },
     "mission": {
       "title": "Misión",
-      "content": "Impulsar a las empresas y emprendedores mediante el desarrollo de soluciones tecnológicas innovadoras, accesibles y escalables, que fortalezcan su presencia digital, generen valor y mejoren la experiencia de sus usuarios."
+      "content": "Potenciar compañías y emprendedores con herramientas tecnológicas vanguardistas, asequibles y con capacidad de crecimiento, que consoliden su imagen digital, agreguen valor y eleven la vivencia del usuario."
     },
     "vision": {
       "title": "Visión",
-      "content": "Convertirnos en un referente en soluciones digitales en México y Latinoamérica, reconocidos por la calidad, innovación y accesibilidad de nuestros servicios, contribuyendo a la transformación tecnológica de negocios de todos los tamaños."
+      "content": "Posicionarnos como líderes en el ámbito digital de México y América Latina, valorados por nuestra excelencia, creatividad y precios competitivos, apoyando la modernización tecnológica de empresas de cualquier escala."
     },
     "values": {
       "title": "Valores",
-      "innovation": "Innovación: Buscamos constantemente nuevas formas de optimizar la experiencia digital.",
-      "commitment": "Compromiso: Cumplimos con los objetivos de nuestros clientes con seriedad y dedicación.",
-      "quality": "Calidad: Entregamos proyectos funcionales, seguros y de alto rendimiento.",
-      "accessibility": "Accesibilidad: Ofrecemos planes flexibles que se ajustan a diferentes presupuestos.",
-      "collaboration": "Colaboración: Trabajamos de la mano con nuestros clientes para lograr resultados a la medida.",
-      "transparency": "Transparencia: Comunicamos con claridad cada proceso y costo involucrado."
+      "innovation": "Innovación: Exploramos permanentemente alternativas para perfeccionar el entorno digital.",
+      "commitment": "Compromiso: Alcanzamos las metas de quienes confían en nosotros con responsabilidad y entrega.",
+      "quality": "Calidad: Proveemos proyectos estables, protegidos y de gran desempeño.",
+      "accessibility": "Accesibilidad: Contamos con esquemas adaptables a distintas capacidades económicas.",
+      "collaboration": "Colaboración: Actuamos junto a nuestros clientes para conseguir soluciones personalizadas.",
+      "transparency": "Transparencia: Explicamos abiertamente cada fase del trabajo y los gastos asociados."
     },
     "distinguish": {
       "title": "Lo que nos distingue",
-      "content": "En PixNetMX, somos un equipo de expertos apasionados por el diseño y desarrollo de software a medida. Con años de experiencia en la industria, nos dedicamos a crear soluciones digitales que no solo cumplen, sino que superan las expectativas de nuestros clientes. Nuestra filosofía se basa en la escucha activa, la colaboración transparente y la entrega de productos de alta calidad. Creemos firmemente que el software bien diseñado tiene el poder de optimizar procesos, generar valor y abrir nuevas posibilidades de negocio. Desde el concepto inicial hasta la implementación y soporte continuo, estamos comprometidos con tu éxito."
+      "content": "En PixNetMX integramos un grupo de profesionales dedicados al desarrollo y diseño de sistemas a medida. Con trayectoria en el rubro, generamos productos digitales que rebasan las previsiones de quienes nos contratan. Nos guía la comunicación abierta, el trabajo en equipo y la entrega de resultados impecables. Confiamos en que un software correctamente concebido es capaz de agilizar operaciones, aportar beneficios tangibles y descubrir nuevas oportunidades comerciales. Te acompañamos desde la idea original hasta la puesta en marcha y la asistencia permanente."
     },
     "objective": {
       "title": "Nuestro Objetivo",
-      "content": "Empoderar a empresas de todos los tamaños con soluciones de software innovadoras, escalables y eficientes que impulsen su crecimiento y competitividad en el mercado digital.",
-      "subtitle": "Ser reconocidos como el socio tecnológico preferido por empresas que buscan excelencia, innovación y confiabilidad en el diseño y desarrollo de software."
+      "content": "Dotar a negocios de cualquier dimensión con soluciones informáticas creativas, flexibles y de alto rendimiento que potencien su expansión y ventaja en el entorno digital.",
+      "subtitle": "Ser la opción tecnológica predilecta para organizaciones que valoran la calidad, la innovación y la solidez en el diseño y construcción de software."
     },
     "cta": {
-      "title": "¿Estás listo para que tus ideas se conviertan en realidad?",
+      "title": "¿Preparado para materializar tus proyectos?",
       "button": "Cotizar ahora"
     }
   },
   "solutions": {
     "hero": {
       "title": "Diseño & Desarrollo de Websites",
-      "content": "En PixNetMX, ofrecemos un portafolio completo de servicios y paquetes de diseño y desarrollo de software, diseñados para abordar tus desafíos específicos y aprovechar al máximo las oportunidades digitales.",
+      "content": "PixNetMX dispone de un catálogo integral de soluciones y paquetes para diseño y programación, orientados a resolver tus necesidades particulares y explotar las ventajas del mundo digital.",
       "cta": "Cotizar"
     },
     "servicesTitle": "Servicios & Paquetes",
@@ -94,194 +94,194 @@
     "services": {
       "uxuiBasic": {
         "title": "UX / UI Diseño de interfaz básico",
-        "desc": "Prototipado, mockups y guía de estilo.",
+        "desc": "Elaboración de prototipos, bosquejos visuales y lineamientos de estilo.",
         "price": 13500
       },
       "uxuiStandard": {
         "title": "UX / UI Diseño de interfaz",
-        "desc": "Prototipado, mockups, guía de estilo, pruebas de usuario, adaptaciones responsivas.",
+        "desc": "Prototipos, bocetos, manual de estilo, ensayos con usuarios y ajustes para distintos dispositivos.",
         "price": 22700
       },
       "uxuiRedesign": {
         "title": "Rediseño de interfaz / mejora UX",
-        "desc": "Revisar un sistema existente, proponer mejoras, hacer pruebas con usuarios, cambios visuales.",
+        "desc": "Análisis de plataforma actual, sugerencias de optimización, test con usuarios y renovación visual.",
         "price": 30000
       },
       "webStatic": {
         "title": "Desarrollo web – sitio corporativo estático",
-        "desc": "Páginas de contenido fijo (Inicio, Sobre nosotros, Servicios, Contacto) sin backend complejo, responsive.",
+        "desc": "Secciones fijas (Principal, Quiénes somos, Servicios, Contacto) adaptables a móviles, sin gestor complejo.",
         "price": 13800
       },
       "webDynamic": {
         "title": "Desarrollo web – sitio dinámico / CMS",
-        "desc": "Integración con CMS (WordPress, Joomla, etc.), formularios, panel de administración, cambios de contenido.",
+        "desc": "Conexión con gestores (WordPress, Joomla…), formularios, panel de control y gestión de contenidos.",
         "price": 19600
       },
       "ecommerce": {
         "title": "E-commerce básico",
-        "desc": "Catálogo, carrito, pasarela de pago, envíos, funcionalidad de usuario.",
+        "desc": "Exhibidor de productos, carrito de compra, pasarela de cobro, logística de envíos y perfiles de cliente.",
         "price": 25100
       },
       "appSimple": {
         "title": "Aplicación móvil sencilla",
-        "desc": "App híbrida o nativa simple, funciones básicas, conexión con API, diseño UI/UX limitado.",
+        "desc": "Aplicación híbrida o nativa elemental, prestaciones básicas, enlace a API y diseño visual acotado.",
         "price": 45000
       },
       "appComplex": {
         "title": "Aplicación móvil intermedia / compleja",
-        "desc": "Más pantallas, integración con funciones nativas, geolocalización, notificaciones push, más diseño.",
+        "desc": "Mayor cantidad de pantallas, uso de funcionalidades del dispositivo, ubicación, avisos push y diseño más trabajado.",
         "price": 80100
       },
       "apiIntegration": {
         "title": "Integración de APIs / servicios externos",
-        "desc": "Conexión simple con APIs, pagos, mapas, sistemas externos, etc.",
+        "desc": "Enlace básico con servicios externos: pagos, geolocalización, mapas y otros sistemas.",
         "price": 10000
       }
     },
     "packages": {
       "landingUltra": {
         "title": "Landing Page Ultra básica",
-        "desc": "Una sola sección con información de contacto o promoción temporal.",
+        "desc": "Página de una sola sección con datos de contacto o campaña por tiempo limitado.",
         "price": 100
       },
       "pageSimple": {
         "title": "Página informativa simple",
-        "desc": "Hasta 2 páginas (Inicio), responsive, plantilla ajustada.",
+        "desc": "Máximo dos pantallas (Portada), adaptable, con plantilla modificada.",
         "price": 3250
       },
       "digitalCard": {
         "title": "Tarjeta digital / mini landing",
-        "desc": "Una sola pantalla con QR, logo, datos de contacto y redes sociales.",
+        "desc": "Pantalla única con código QR, identidad, formas de contacto y redes.",
         "price": 500
       },
       "landingPromo": {
         "title": "Landing de promoción",
-        "desc": "Página con formulario de captura, diseño responsive, integración a correo.",
+        "desc": "Sitio con formulario de registro, diseño adaptable y conexión a correo electrónico.",
         "price": 2500
       },
       "onePage": {
         "title": "One Page profesional",
-        "desc": "Sección única con bloques: inicio, servicios, testimonios, contacto.",
+        "desc": "Página de bloque único con apartados: portada, prestaciones, opiniones, contacto.",
         "price": 4850
       },
       "catalog": {
         "title": "Catálogo online sin pago",
-        "desc": "Muestra productos/servicios con buscador y fichas, sin carrito.",
+        "desc": "Exhibe artículos o servicios con buscador y tarjetas informativas, sin opción de compra.",
         "price": 7580
       },
       "blog": {
         "title": "Blog profesional",
-        "desc": "Integración a CMS (WordPress), categorías, buscador, comentarios.",
+        "desc": "Montaje sobre gestor (WordPress), clasificación por temas, explorador y espacio de comentarios.",
         "price": 9120
       },
       "institutional": {
         "title": "Sitio institucional con hasta 5 páginas",
-        "desc": "Inicio, Nosotros, Servicios, Noticias, Contacto, adaptable a móviles.",
+        "desc": "Portada, Perfil corporativo, Servicios, Novedades, Contacto; con adaptación a dispositivos móviles.",
         "price": 12460
       }
     }
   },
   "contact": {
-  "hero": {
-    "title": "¿Requieres una cotización? ¿Tienes alguna duda? ¡Contáctanos!",
-    "subtitle": "Ponemos a tu disposición múltiples canales de contacto, nuestro equipo estará feliz de atenderte."
+    "hero": {
+      "title": "¿Necesitas un presupuesto o tienes consultas? ¡Escríbenos!",
+      "subtitle": "Te ofrecemos distintas vías de comunicación; nuestro personal estará encantado de ayudarte."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "emailLabel": "Email",
+      "email": "equipo@pixnetmx.com",
+      "phoneLabel": "Teléfono",
+      "phone": "55 5547 3881",
+      "addressLabel": "Dirección",
+      "address": "AV. RIO CONSULADO CIRCUITO INTERIOR, N°516, OFICINA 102, COLONIA TLATILCO, ALCALDIA AZCAPOTZALCO, C.P. 02860, CIUDAD DE MEXICO.",
+      "paymentMethods": "Métodos de pago aceptados:"
+    },
+    "form": {
+      "title": "Contacto",
+      "name": "Nombre completo *",
+      "company": "Compañía *",
+      "email": "Email *",
+      "phone": "Teléfono *",
+      "message": "¿En qué podemos ayudarte? *",
+      "submit": "Aceptar",
+      "success": "Tu información fue enviada. Pronto recibirás nuestra respuesta.",
+      "error": "No pudimos enviar tu mensaje. Vuelve a probar, por favor."
+    }
   },
-  "info": {
-    "title": "Información de Contacto",
-    "emailLabel": "Email",
-    "email": "equipo@pixnetmx.com",
-    "phoneLabel": "Teléfono",
-    "phone": "55 5547 3881",
-    "addressLabel": "Dirección",
-    "address": "AV. RIO CONSULADO CIRCUITO INTERIOR, N°516, OFICINA 102, COLONIA TLATILCO, ALCALDIA AZCAPOTZALCO, C.P. 02860, CIUDAD DE MEXICO.",
-    "paymentMethods": "Métodos de pago aceptados:"
-  },
-  "form": {
-    "title": "Contacto",
-    "name": "Nombre completo *",
-    "company": "Compañía *",
-    "email": "Email *",
-    "phone": "Teléfono *",
-    "message": "¿En qué podemos ayudarte? *",
-    "submit": "Aceptar",
-    "success": "Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.",
-    "error": "Error al enviar el mensaje. Por favor, intenta de nuevo."
-  }
-},
   "cart": {
-  "title": "Carrito",
-  "products": "Productos del carrito",
-  "product": "Producto",
-  "total": "Total",
-  "totals": "Totales del carrito",
-  "coupon": "Añadir cupones",
-  "couponCode": "Introduce el código",
-  "couponApply": "Aplicar",
-  "couponInvalid": "Código de cupón inválido",
-  "subtotal": "Subtotal",
-  "iva": "IVA (16%)",
-  "estimatedTotal": "Total estimado",
-  "checkout": "Finalizar compra",
-  "empty": "Tu carrito está vacío",
-  "emptyDesc": "Agrega algunos servicios para comenzar",
-  "continueShopping": "Seguir comprando",
-  "remove": "Eliminar",
-  "itemAdded": "Producto agregado al carrito",
-  "each": "c/u"
-},
+    "title": "Carrito",
+    "products": "Productos del carrito",
+    "product": "Producto",
+    "total": "Total",
+    "totals": "Totales del carrito",
+    "coupon": "Añadir cupones",
+    "couponCode": "Introduce el código",
+    "couponApply": "Aplicar",
+    "couponInvalid": "Código de cupón inválido",
+    "subtotal": "Subtotal",
+    "iva": "IVA (16%)",
+    "estimatedTotal": "Total estimado",
+    "checkout": "Finalizar compra",
+    "empty": "Tu carrito está vacío",
+    "emptyDesc": "Agrega algunos servicios para comenzar",
+    "continueShopping": "Seguir comprando",
+    "remove": "Eliminar",
+    "itemAdded": "Producto agregado al carrito",
+    "each": "c/u"
+  },
   "payment": {
-  "title": "Detalles de facturación",
-  "name": "Nombre *",
-  "lastname": "Apellidos *",
-  "country": "País / Región *",
-  "address": "Dirección de la calle *",
-  "addressPlaceholder": "Nombre de la calle y número de la casa",
-  "address2": "Apartamento, habitación, etc. (opcional)",
-  "address2Placeholder": "Apartamento, habitación, etc. (opcional)",
-  "city": "Población *",
-  "state": "Región / Provincia *",
-  "zip": "Código postal / ZIP *",
-  "phone": "Teléfono (opcional)",
-  "email": "Dirección de correo electrónico *",
-  "notes": "Notas del pedido (opcional)",
-  "notesPlaceholder": "Notas sobre tu pedido, por ejemplo, notas especiales para la entrega.",
-  "orderSummary": "Tu pedido",
-  "product": "Producto",
-  "subtotal": "Subtotal",
-  "iva": "IVA (16%)",
-  "total": "Total",
-  "coupon": "¿Tienes un cupón? Haz clic aquí para introducir tu código",
-  "cardTitle": "Tarjeta de Crédito o débito",
-  "securePayments": "Pagos seguros con",
-  "cardName": "Nombre en la tarjeta",
-  "cardNumber": "Número de tarjeta",
-  "cardExpiry": "MM/AA",
-  "cardCvc": "CVC",
-  "submit": "Realizar el pedido",
-  "privacy": "política de privacidad",
-  "privacyText": "La información personal que nos proporcione será utilizada para gestionar su pedido, mejorar su experiencia en nuestro sitio y para los fines establecidos en nuestra",
-  "mexico": "México",
-  "success": "Pago procesado correctamente",
-  "error": "Error al procesar el pago",
-  "validation": {
-    "nameRequired": "El nombre es requerido",
-    "lastnameRequired": "Los apellidos son requeridos",
-    "addressRequired": "La dirección es requerida",
-    "cityRequired": "La población es requerida",
-    "stateRequired": "La región es requerida",
-    "zipRequired": "El código postal es requerido",
-    "zipFormat": "El código postal debe tener 5 dígitos",
-    "emailRequired": "El email es requerido",
-    "emailFormat": "El email no es válido",
-    "phoneFormat": "El teléfono solo debe contener números",
-    "cardNameRequired": "El nombre en la tarjeta es requerido",
-    "cardNumberRequired": "El número de tarjeta es requerido",
-    "cardNumberFormat": "El número de tarjeta no es válido",
-    "cardExpiryRequired": "La fecha de expiración es requerida",
-    "cardCvcRequired": "El CVC es requerido",
-    "cardCvcFormat": "El CVC debe tener 3 o 4 dígitos"
-  }
-},
+    "title": "Detalles de facturación",
+    "name": "Nombre *",
+    "lastname": "Apellidos *",
+    "country": "País / Región *",
+    "address": "Dirección de la calle *",
+    "addressPlaceholder": "Nombre de la calle y número de la casa",
+    "address2": "Apartamento, habitación, etc. (opcional)",
+    "address2Placeholder": "Apartamento, habitación, etc. (opcional)",
+    "city": "Población *",
+    "state": "Región / Provincia *",
+    "zip": "Código postal / ZIP *",
+    "phone": "Teléfono (opcional)",
+    "email": "Dirección de correo electrónico *",
+    "notes": "Notas del pedido (opcional)",
+    "notesPlaceholder": "Notas sobre tu pedido, por ejemplo, notas especiales para la entrega.",
+    "orderSummary": "Tu pedido",
+    "product": "Producto",
+    "subtotal": "Subtotal",
+    "iva": "IVA (16%)",
+    "total": "Total",
+    "coupon": "¿Tienes un cupón? Haz clic aquí para introducir tu código",
+    "cardTitle": "Tarjeta de Crédito o débito",
+    "securePayments": "Pagos seguros con",
+    "cardName": "Nombre en la tarjeta",
+    "cardNumber": "Número de tarjeta",
+    "cardExpiry": "MM/AA",
+    "cardCvc": "CVC",
+    "submit": "Realizar el pedido",
+    "privacy": "política de privacidad",
+    "privacyText": "Tus datos personales serán empleados para tramitar tu compra, optimizar tu navegación y conforme a lo dispuesto en nuestro",
+    "mexico": "México",
+    "success": "Pago procesado correctamente",
+    "error": "Error al procesar el pago",
+    "validation": {
+      "nameRequired": "El nombre es requerido",
+      "lastnameRequired": "Los apellidos son requeridos",
+      "addressRequired": "La dirección es requerida",
+      "cityRequired": "La población es requerida",
+      "stateRequired": "La región es requerida",
+      "zipRequired": "El código postal es requerido",
+      "zipFormat": "El código postal debe tener 5 dígitos",
+      "emailRequired": "El email es requerido",
+      "emailFormat": "El email no es válido",
+      "phoneFormat": "El teléfono solo debe contener números",
+      "cardNameRequired": "El nombre en la tarjeta es requerido",
+      "cardNumberRequired": "El número de tarjeta es requerido",
+      "cardNumberFormat": "El número de tarjeta no es válido",
+      "cardExpiryRequired": "La fecha de expiración es requerida",
+      "cardCvcRequired": "El CVC es requerido",
+      "cardCvcFormat": "El CVC debe tener 3 o 4 dígitos"
+    }
+  },
   "success": {
     "title": "¡Pago Exitoso!",
     "subtitle": "Tu pedido ha sido procesado correctamente",
