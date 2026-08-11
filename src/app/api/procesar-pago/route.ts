@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 
+const API_URL = "https://pagos.keycop.com.mx/api/v1";
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -19,25 +21,21 @@ export async function POST(request: Request) {
       telefono 
     } = body;
 
-    const API_URL = process.env.ETOMIN_BASE_URL || 'https://api.etomin.com/v1';
-    const etominUser = process.env.ETOMIN_USER;
-    const etominPassword = process.env.ETOMIN_PASSWORD;
+    const keycopEmail = process.env.KEYCOP_EMAIL;
+    const keycopPassword = process.env.KEYCOP_PASSWORD;
 
-    console.log('🔑 Credenciales:', { 
-      url: API_URL,
-      user: etominUser ? '✅' : '❌', 
-      password: etominPassword ? '✅' : '❌' 
+    console.log('🔑 Keycop:', { 
+      email: keycopEmail ? '✅' : '❌', 
+      password: keycopPassword ? '✅' : '❌' 
     });
 
-    if (!etominUser || !etominPassword) {
-      console.error('❌ Variables de entorno no encontradas');
+    if (!keycopEmail || !keycopPassword) {
       return NextResponse.json(
         { success: false, message: 'Configuración de pago incompleta' }, 
         { status: 500 }
       );
     }
 
-    // Validar monto
     const amount = Number(monto);
     if (isNaN(amount) || amount <= 0) {
       return NextResponse.json(
@@ -46,156 +44,137 @@ export async function POST(request: Request) {
       );
     }
 
-    // 1. Autenticación con Etomin
-    console.log('🔐 Autenticando con Etomin...');
-    let authResponse;
-    try {
-      authResponse = await fetch(`${API_URL}/signin`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: etominUser,
-          password: etominPassword
-        })
-      });
-      
-      if (!authResponse.ok) {
-        const errorData = await authResponse.json();
-        throw new Error(errorData.message || 'Error de autenticación');
-      }
-      
-      const authData = await authResponse.json();
-      console.log('✅ Auth exitoso');
-      
-      const authToken = authData.authToken;
-      if (!authToken) {
-        console.error('❌ No se recibió token');
-        return NextResponse.json(
-          { success: false, message: 'Token no recibido' }, 
-          { status: 500 }
-        );
-      }
+    // 1. Autenticación
+    console.log('🔐 Autenticando...');
+    
+    const authResponse = await fetch(`${API_URL}/signin`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: keycopEmail,
+        password: keycopPassword
+      })
+    });
 
-      // 2. Tokenización de tarjeta
-      const [month, year] = fechaTarjeta.split('/');
-      console.log('💳 Tokenizando tarjeta...');
-      
-      let tokenResponse;
-      try {
-        tokenResponse = await fetch(`${API_URL}/card/tokenizer`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`
-          },
-          body: JSON.stringify({
-            cardData: {
-              cardNumber: numeroTarjeta.replace(/\s/g, ''),
-              cardholderName: nombreTarjeta,
-              expirationYear: '20' + year,
-              expirationMonth: month
-            }
-          })
-        });
-        
-        if (!tokenResponse.ok) {
-          const errorData = await tokenResponse.json();
-          throw new Error(errorData.message || 'Error al tokenizar la tarjeta');
-        }
-        
-        const tokenData = await tokenResponse.json();
-        console.log('✅ Tarjeta tokenizada');
-        
-        const cardToken = tokenData.cardNumberToken;
-        if (!cardToken) {
-          return NextResponse.json(
-            { success: false, message: 'No se pudo tokenizar la tarjeta' }, 
-            { status: 400 }
-          );
-        }
-
-        // 3. Procesar venta
-        const orderId = 'TXN-' + Date.now();
-        console.log('💰 Procesando venta...');
-        
-        const saleResponse = await fetch(`${API_URL}/sale`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`
-          },
-          body: JSON.stringify({
-            amount: amount,
-            currency: "484",
-            reference: orderId,
-            customerInformation: {
-              firstName: (nombre || 'Cliente').trim(),
-              lastName: (apellidos || 'PixNetMX').trim(),
-              middleName: "",
-              email: (email || 'cliente@pixnetmx.com').trim(),
-              phone1: (telefono || '5555555555').trim(),
-              address1: (direccion || 'Sin dirección').trim(),
-              address2: "",
-              city: (poblacion || 'Ciudad de México').trim(),
-              state: (region || 'Ciudad de México').trim(),
-              postalCode: (codigoPostal || '06500').trim(),
-              country: "MX",
-              company: "",
-              ip: request.headers.get('x-forwarded-for') || '127.0.0.1',
-            },
-            cardData: { 
-              cardNumberToken: cardToken, 
-              cvv: cvv 
-            },
-          })
-        });
-        
-        const saleData = await saleResponse.json();
-        console.log('✅ Respuesta de venta:', saleData);
-
-        // 4. Verificar respuesta
-        if (saleData.status === "APPROVED") {
-          return NextResponse.json({ 
-            success: true, 
-            transactionId: saleData.orderId || saleData.reference || orderId, 
-            reference: saleData.reference || orderId, 
-            status: saleData.status, 
-            message: 'Pago aprobado' 
-          });
-        } else {
-          return NextResponse.json(
-            { 
-              success: false, 
-              status: saleData.status, 
-              message: saleData.message || 'Pago rechazado' 
-            }, 
-            { status: 400 }
-          );
-        }
-      } catch (tokenError: any) {
-        console.error('❌ Error tokenización:', tokenError.message);
-        return NextResponse.json(
-          { success: false, message: tokenError.message || 'Error al tokenizar la tarjeta' }, 
-          { status: 400 }
-        );
-      }
-    } catch (authError: any) {
-      console.error('❌ Error de autenticación:', authError.message);
+    if (!authResponse.ok) {
       return NextResponse.json(
-        { success: false, message: authError.message || 'Error de autenticación con Etomin' }, 
+        { success: false, message: 'Error de autenticación' }, 
         { status: 500 }
       );
     }
+
+    const authData = await authResponse.json();
+    const authToken = authData.authToken;
+    
+    if (!authToken) {
+      return NextResponse.json(
+        { success: false, message: 'Token no recibido' }, 
+        { status: 500 }
+      );
+    }
+
+    console.log('✅ Autenticado');
+
+    // 2. Tokenización
+    const [month, year] = fechaTarjeta.split('/');
+    console.log('💳 Tokenizando...');
+    
+    const tokenResponse = await fetch(`${API_URL}/card/tokenizer`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${authToken}`
+      },
+      body: JSON.stringify({
+        cardData: {
+          cardNumber: numeroTarjeta.replace(/\s/g, ''),
+          cardholderName: nombreTarjeta,
+          expirationYear: '20' + year,
+          expirationMonth: month
+        }
+      })
+    });
+
+    if (!tokenResponse.ok) {
+      return NextResponse.json(
+        { success: false, message: 'Error al tokenizar la tarjeta' }, 
+        { status: 400 }
+      );
+    }
+
+    const tokenData = await tokenResponse.json();
+    const cardToken = tokenData.cardNumberToken;
+    
+    if (!cardToken) {
+      return NextResponse.json(
+        { success: false, message: 'No se pudo tokenizar la tarjeta' }, 
+        { status: 400 }
+      );
+    }
+
+    console.log('✅ Tokenizada');
+
+    // 3. Venta
+    const orderId = 'TXN-' + Date.now();
+    console.log('💰 Procesando venta...');
+    
+    const saleResponse = await fetch(`${API_URL}/sale`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${authToken}`
+      },
+      body: JSON.stringify({
+        amount: amount,
+        currency: "484",
+        reference: orderId,
+        customerInformation: {
+          firstName: (nombre || 'Cliente').trim(),
+          lastName: (apellidos || 'PixNetMX').trim(),
+          email: (email || 'cliente@pixnetmx.com').trim(),
+          phone1: (telefono || '5555555555').trim(),
+          address1: (direccion || 'Sin dirección').trim(),
+          address2: "",
+          city: (poblacion || 'Ciudad de México').trim(),
+          state: (region || 'Ciudad de México').trim(),
+          postalCode: (codigoPostal || '06500').trim(),
+          country: "MX",
+          company: "",
+          ip: request.headers.get('x-forwarded-for') || '127.0.0.1',
+        },
+        cardData: { 
+          cardNumberToken: cardToken, 
+          cvv: cvv 
+        },
+      })
+    });
+
+    const saleData = await saleResponse.json();
+    console.log('✅ Venta:', JSON.stringify(saleData).substring(0, 200));
+
+    if (saleData.status === "APPROVED") {
+      return NextResponse.json({ 
+        success: true, 
+        transactionId: saleData.orderId || saleData.reference || orderId, 
+        reference: saleData.reference || orderId, 
+        status: saleData.status, 
+        message: 'Pago aprobado' 
+      });
+    } else {
+      return NextResponse.json(
+        { 
+          success: false, 
+          status: saleData.status, 
+          message: saleData.responseMessage || saleData.message || 'Pago rechazado' 
+        }, 
+        { status: 400 }
+      );
+    }
+
   } catch (error: any) {
-    console.error('❌ Error general:', error.message);
+    console.error('❌ Error:', error);
     return NextResponse.json(
-      { 
-        success: false, 
-        status: 'error', 
-        message: 'Error procesando el pago' 
-      }, 
+      { success: false, message: 'Error procesando el pago' }, 
       { status: 500 }
     );
   }
