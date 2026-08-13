@@ -22,6 +22,13 @@ export default function OrderSummary({ isProcessing }: OrderSummaryProps) {
     }).format(price);
   };
 
+  const getItemTitle = (item: any) => {
+  if (item.custom) {
+    return t('solutions.customProductPage.title');
+  }
+  return t(item.titleKey);
+};
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -38,11 +45,16 @@ export default function OrderSummary({ isProcessing }: OrderSummaryProps) {
           <div key={item.id} className="flex justify-between items-start">
             <div className="flex-grow">
               <p className="font-inter text-sm font-medium text-text-primary">
-                {t(item.titleKey)}
+                {getItemTitle(item)}
               </p>
               <p className="font-inter text-xs text-text-secondary">
                 × {item.quantity}
               </p>
+              {item.custom && item.quoteNumber && (
+                <p className="font-inter text-xs text-text-secondary mt-1">
+                  {t('cart.quoteNumber')}: {item.quoteNumber}
+                </p>
+              )}
             </div>
             <span className="font-inter text-sm text-text-primary ml-4">
               {formatPrice(item.price * item.quantity)}

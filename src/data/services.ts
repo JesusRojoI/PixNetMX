@@ -131,6 +131,9 @@ export interface CartItem {
   price: number;
   quantity: number;
   image?: string;
+  custom?: boolean;
+  title?: string;
+  quoteNumber?: string;
 }
 
 export const getServiceById = (id: string): ServiceItem | undefined => {

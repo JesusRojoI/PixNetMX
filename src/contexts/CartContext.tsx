@@ -1,7 +1,18 @@
 'use client';
 
 import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
-import { CartItem, getServiceById } from '@/data/services';
+import { getServiceById } from '@/data/services';
+
+interface CartItem {
+  id: string;
+  titleKey: string;
+  price: number;
+  quantity: number;
+  image?: string;
+  custom?: boolean;
+  quoteNumber?: string;
+  title?: string;
+}
 
 interface CartState {
   items: CartItem[];
@@ -10,6 +21,7 @@ interface CartState {
 
 type CartAction =
   | { type: 'ADD_ITEM'; payload: { id: string } }
+  | { type: 'ADD_CUSTOM_ITEM'; payload: CartItem }
   | { type: 'REMOVE_ITEM'; payload: { id: string } }
   | { type: 'UPDATE_QUANTITY'; payload: { id: string; quantity: number } }
   | { type: 'CLEAR_CART' }
@@ -18,6 +30,7 @@ type CartAction =
 interface CartContextType {
   state: CartState;
   addItem: (id: string) => void;
+  addCustomItem: (item: CartItem) => void;
   removeItem: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
@@ -48,6 +61,23 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       return {
         ...state,
         items: [...state.items, { ...service, quantity: 1 }],
+      };
+    }
+    case 'ADD_CUSTOM_ITEM': {
+      const existingItem = state.items.find(item => item.id === action.payload.id);
+      if (existingItem) {
+        return {
+          ...state,
+          items: state.items.map(item =>
+            item.id === action.payload.id
+              ? { ...item, quantity: item.quantity + action.payload.quantity }
+              : item
+          ),
+        };
+      }
+      return {
+        ...state,
+        items: [...state.items, action.payload],
       };
     }
     case 'REMOVE_ITEM':
@@ -104,6 +134,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     dispatch({ type: 'ADD_ITEM', payload: { id } });
   };
 
+  const addCustomItem = (item: CartItem) => {
+    dispatch({ type: 'ADD_CUSTOM_ITEM', payload: item });
+  };
+
   const removeItem = (id: string) => {
     dispatch({ type: 'REMOVE_ITEM', payload: { id } });
   };
@@ -126,6 +160,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       value={{
         state,
         addItem,
+        addCustomItem,
         removeItem,
         updateQuantity,
         clearCart,

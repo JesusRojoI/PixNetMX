@@ -84,11 +84,11 @@ export default function PagoPage() {
               to: billingData.email,
               orderData: {
                 nombre: `${billingData.name} ${billingData.lastname}`,
-                productos: state.items.map(item => ({
-                  nombre: t(item.titleKey),
-                  cantidad: item.quantity,
-                  precio: item.price,
-                })),
+               productos: state.items.map(item => ({
+  nombre: item.custom ? t('solutions.customProductPage.title') : t(item.titleKey),
+  cantidad: item.quantity,
+  precio: item.price,
+})),
                 subtotal,
                 descuento: 0,
                 impuesto: iva,

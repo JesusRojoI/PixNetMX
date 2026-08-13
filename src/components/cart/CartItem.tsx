@@ -23,6 +23,13 @@ export default function CartItem({ item, index }: CartItemProps) {
     }).format(price);
   };
 
+ const getItemTitle = () => {
+  if (item.custom) {
+    return t('solutions.customProductPage.title');
+  }
+  return t(item.titleKey);
+};
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -32,11 +39,16 @@ export default function CartItem({ item, index }: CartItemProps) {
     >
       <div className="flex-grow">
         <h3 className="font-rubik font-semibold text-primary">
-          {t(item.titleKey)}
+          {getItemTitle()}
         </h3>
         <p className="font-inter text-sm text-text-secondary mt-1">
           {formatPrice(item.price)}
         </p>
+        {item.custom && item.quoteNumber && (
+          <p className="font-inter text-xs text-text-secondary mt-1">
+            {t('cart.quoteNumber')}: {item.quoteNumber}
+          </p>
+        )}
       </div>
 
       <div className="flex items-center gap-6">

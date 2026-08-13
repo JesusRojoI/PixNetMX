@@ -93,93 +93,99 @@
     "mxn": "MXN",
     "services": {
       "uxuiBasic": {
-        "title": "UX / UI Diseño de interfaz básico",
-        "desc": "Elaboración de prototipos, bosquejos visuales y lineamientos de estilo.",
-        "price": 13500
-      },
-      "uxuiStandard": {
-        "title": "UX / UI Diseño de interfaz",
-        "desc": "Prototipos, bocetos, manual de estilo, ensayos con usuarios y ajustes para distintos dispositivos.",
-        "price": 22700
-      },
-      "uxuiRedesign": {
-        "title": "Rediseño de interfaz / mejora UX",
-        "desc": "Análisis de plataforma actual, sugerencias de optimización, test con usuarios y renovación visual.",
-        "price": 30000
-      },
-      "webStatic": {
-        "title": "Desarrollo web – sitio corporativo estático",
-        "desc": "Secciones fijas (Principal, Quiénes somos, Servicios, Contacto) adaptables a móviles, sin gestor complejo.",
-        "price": 13800
-      },
-      "webDynamic": {
-        "title": "Desarrollo web – sitio dinámico / CMS",
-        "desc": "Conexión con gestores (WordPress, Joomla…), formularios, panel de control y gestión de contenidos.",
-        "price": 19600
-      },
-      "ecommerce": {
-        "title": "E-commerce básico",
-        "desc": "Exhibidor de productos, carrito de compra, pasarela de cobro, logística de envíos y perfiles de cliente.",
-        "price": 25100
-      },
-      "appSimple": {
-        "title": "Aplicación móvil sencilla",
-        "desc": "Aplicación híbrida o nativa elemental, prestaciones básicas, enlace a API y diseño visual acotado.",
-        "price": 45000
-      },
-      "appComplex": {
-        "title": "Aplicación móvil intermedia / compleja",
-        "desc": "Mayor cantidad de pantallas, uso de funcionalidades del dispositivo, ubicación, avisos push y diseño más trabajado.",
-        "price": 80100
-      },
-      "apiIntegration": {
-        "title": "Integración de APIs / servicios externos",
-        "desc": "Enlace básico con servicios externos: pagos, geolocalización, mapas y otros sistemas.",
-        "price": 10000
-      }
+      "title": "UX / UI Diseño de interfaz básico",
+      "desc": "Prototipado, mockups y guía de estilo."
+    },
+    "uxuiStandard": {
+      "title": "UX / UI Diseño de interfaz",
+      "desc": "Prototipado, mockups, guía de estilo, pruebas de usuario, adaptaciones responsivas."
+    },
+    "uxuiRedesign": {
+      "title": "Rediseño de interfaz / mejora UX",
+      "desc": "Revisar un sistema existente, proponer mejoras, hacer pruebas con usuarios, cambios visuales."
+    },
+    "webStatic": {
+      "title": "Desarrollo web – sitio corporativo estático",
+      "desc": "Páginas de contenido fijo (Inicio, Sobre nosotros, Servicios, Contacto) sin backend complejo, responsive."
+    },
+    "webDynamic": {
+      "title": "Desarrollo web – sitio dinámico / CMS",
+      "desc": "Integración con CMS (WordPress, Joomla, etc.), formularios, panel de administración, cambios de contenido."
+    },
+    "ecommerce": {
+      "title": "E-commerce básico",
+      "desc": "Catálogo, carrito, pasarela de pago, envíos, funcionalidad de usuario."
+    },
+    "appSimple": {
+      "title": "Aplicación móvil sencilla",
+      "desc": "App híbrida o nativa simple, funciones básicas, conexión con API, diseño UI/UX limitado."
+    },
+    "appComplex": {
+      "title": "Aplicación móvil intermedia / compleja",
+      "desc": "Más pantallas, integración con funciones nativas, geolocalización, notificaciones push, más diseño."
+    },
+    "apiIntegration": {
+      "title": "Integración de APIs / servicios externos",
+      "desc": "Conexión simple con APIs, pagos, mapas, sistemas externos, etc."
+    }
     },
     "packages": {
       "landingUltra": {
-        "title": "Landing Page Ultra básica",
-        "desc": "Página de una sola sección con datos de contacto o campaña por tiempo limitado.",
-        "price": 100
-      },
-      "pageSimple": {
-        "title": "Página informativa simple",
-        "desc": "Máximo dos pantallas (Portada), adaptable, con plantilla modificada.",
-        "price": 3250
-      },
-      "digitalCard": {
-        "title": "Tarjeta digital / mini landing",
-        "desc": "Pantalla única con código QR, identidad, formas de contacto y redes.",
-        "price": 500
-      },
-      "landingPromo": {
-        "title": "Landing de promoción",
-        "desc": "Sitio con formulario de registro, diseño adaptable y conexión a correo electrónico.",
-        "price": 2500
-      },
-      "onePage": {
-        "title": "One Page profesional",
-        "desc": "Página de bloque único con apartados: portada, prestaciones, opiniones, contacto.",
-        "price": 4850
-      },
-      "catalog": {
-        "title": "Catálogo online sin pago",
-        "desc": "Exhibe artículos o servicios con buscador y tarjetas informativas, sin opción de compra.",
-        "price": 7580
-      },
-      "blog": {
-        "title": "Blog profesional",
-        "desc": "Montaje sobre gestor (WordPress), clasificación por temas, explorador y espacio de comentarios.",
-        "price": 9120
-      },
-      "institutional": {
-        "title": "Sitio institucional con hasta 5 páginas",
-        "desc": "Portada, Perfil corporativo, Servicios, Novedades, Contacto; con adaptación a dispositivos móviles.",
-        "price": 12460
-      }
+      "title": "Landing Page Ultra básica",
+      "desc": "Una sola sección con información de contacto o promoción temporal."
+    },
+    "pageSimple": {
+      "title": "Página informativa simple",
+      "desc": "Hasta 2 páginas (Inicio), responsive, plantilla ajustada."
+    },
+    "digitalCard": {
+      "title": "Tarjeta digital / mini landing",
+      "desc": "Una sola pantalla con QR, logo, datos de contacto y redes sociales."
+    },
+    "landingPromo": {
+      "title": "Landing de promoción",
+      "desc": "Página con formulario de captura, diseño responsive, integración a correo."
+    },
+    "onePage": {
+      "title": "One Page profesional",
+      "desc": "Sección única con bloques: inicio, servicios, testimonios, contacto."
+    },
+    "catalog": {
+      "title": "Catálogo online sin pago",
+      "desc": "Muestra productos/servicios con buscador y fichas, sin carrito."
+    },
+    "blog": {
+      "title": "Blog profesional",
+      "desc": "Integración a CMS (WordPress), categorías, buscador, comentarios."
+    },
+    "institutional": {
+      "title": "Sitio institucional con hasta 5 páginas",
+      "desc": "Inicio, Nosotros, Servicios, Noticias, Contacto, adaptable a móviles."
     }
+    },
+    "customProduct": {
+  "title": "Proyecto personalizado",
+  "desc": "¿Requieres de una plataforma completamente personalizada a tu medida? Solicita una cotización a nuestro equipo, una vez que tengas un folio de cotización podrás realizar el pago.",
+  "ctaQuote": "Cotizar ahora",
+  "ctaPay": "Pagar"
+},
+"customProductPage": {
+  "title": "Proyecto desde cero",
+  "subtitle": "¿Tienes una idea brillante pero no sabes cómo convertirla en una solución digital funcional? Nuestro servicio de Desarrollo de Software desde Cero es el puente entre tu concepto y una aplicación robusta, escalable y hecha exactamente a tu medida.",
+  "desc": "No te conformes con soluciones prediseñadas. En lugar de adaptar tu negocio a un software existente, creamos el software que se adapta perfectamente a tus procesos, objetivos y usuarios.",
+  "quoteNumber": "Número de cotización",
+  "quotePlaceholder": "Ingresa tu folio de cotización",
+  "investment": "Inversión (se aplicará 16 por ciento de IVA)",
+  "quantity": "Proyecto desde cero cantidad",
+  "addToCart": "Añadir al carrito",
+  "addedToCart": "han sido añadidos a tu carrito",
+  "viewCart": "Ver carrito",
+  "validation": {
+    "quoteRequired": "El número de cotización es requerido",
+    "investmentRequired": "La inversión es requerida",
+    "investmentInvalid": "La inversión debe ser mayor a 0.00"
+  }
+}
   },
   "contact": {
     "hero": {
@@ -227,7 +233,8 @@
     "continueShopping": "Seguir comprando",
     "remove": "Eliminar",
     "itemAdded": "Producto agregado al carrito",
-    "each": "c/u"
+    "each": "c/u",
+    "quoteNumber": "N° de cotización"
   },
   "payment": {
     "title": "Detalles de facturación",
@@ -299,5 +306,444 @@
     "error": "Error",
     "retry": "Reintentar",
     "back": "Volver"
+  },
+  "terms": {
+  "title": "Términos y condiciones",
+  "website": "Sitio web: pixnetmx.com",
+  "email": "Correo electrónico: equipo@pixnetmx.com",
+  "address": "Domicilio: Av. Río Consulado Circuito Interior, N°516, Oficina 102, Colonia Tlatilco, Alcaldía Azcapotzalco, C.P. 02860, Ciudad de México",
+  "section1": {
+    "title": "1. OBJETO Y ALCANCE",
+    "content": "Estos términos regulan la contratación y prestación de servicios de diseño, desarrollo e implementación de software a través de pixnetmx.com. Los servicios incluyen análisis de requerimientos, diseño de arquitectura, desarrollo de aplicaciones, testing, implementación y soporte técnico inicial."
+  },
+  "section2": {
+    "title": "2. OBLIGACIONES DE LAS PARTES",
+    "providerTitle": "Obligaciones del prestador (SOFTLOGIC):",
+    "providerItems": [
+      "Desarrollar el software conforme a especificaciones acordadas",
+      "Entregar el proyecto en los plazos establecidos",
+      "Proporcionar documentación técnica y manuales de usuario",
+      "Brindar soporte técnico durante el período establecido en contrato",
+      "Mantener confidencialidad sobre información del cliente"
+    ],
+    "clientTitle": "Obligaciones del cliente:",
+    "clientItems": [
+      "Proporcionar información completa y precisa para el desarrollo",
+      "Realizar pagos conforme al calendario acordado",
+      "Designar personal técnico para coordinación del proyecto",
+      "Proporcionar acceso a sistemas cuando sea necesario para integración",
+      "Realizar pruebas y validaciones en los tiempos establecidos"
+    ]
+  },
+  "section3": {
+    "title": "3. PLAZOS Y ENTREGABLES",
+    "content": "Los tiempos de desarrollo se determinarán con base en la complejidad de cada proyecto y serán comunicados previamente al cliente. Los entregables podrán incluir, según corresponda, código fuente, ejecutables, documentación técnica y manuales de usuario. Cualquier modificación al alcance originalmente acordado podrá generar ajustes en los plazos de entrega y en los costos."
+  },
+  "section4": {
+    "title": "4. CONDICIONES ECONÓMICAS Y FORMA DE PAGO",
+    "pricesTitle": "4.1 Precios",
+    "pricesContent": "Los precios son expresados en pesos mexicanos (MXN) y están sujetos al IVA vigente.",
+    "paymentTitle": "4.2 Formas de Pago",
+    "paymentContent": "El pago podrá realizarse a través de la plataforma habilitada, utilizando tarjeta de crédito, débito u otros métodos electrónicos que se indiquen en el sitio al momento de la compra."
+  },
+  "section5": {
+    "title": "5. Propiedad Intelectual",
+    "intro": "Todos los derechos de propiedad intelectual relacionados con los desarrollos, servicios y contenidos generados a través de este sitio se regirán por las siguientes disposiciones:",
+    "items": [
+      "Desarrollos exclusivos: Una vez realizado y confirmado el pago total correspondiente, los desarrollos y código creados de forma específica para el cliente pasarán a ser de su propiedad.",
+      "Herramientas de terceros: Las herramientas, frameworks, librerías y demás componentes de uso general empleados en el desarrollo mantendrán en todo momento las licencias originales de sus respectivos titulares, sin que ello implique transmisión de derechos adicionales al cliente.",
+      "Restricciones de uso: El cliente no podrá reproducir, sublicenciar, comercializar ni distribuir componentes de carácter propietario sin la autorización previa y por escrito de sus respectivos titulares.",
+      "Derechos de la empresa: La empresa conservará todos los derechos sobre sus metodologías, procesos, conocimientos técnicos y know-how utilizados o desarrollados durante la prestación de los servicios."
+    ]
+  },
+  "section6": {
+    "title": "6. GARANTÍA Y SOPORTE",
+    "warrantyTitle": "6.1 Garantía",
+    "warrantyItems": [
+      "Se otorga garantía de 90 días contra defectos de programación posterior a la entrega final",
+      "La garantía cubre únicamente errores de programación documentados y reproducibles",
+      "No cubre modificaciones de requerimientos o problemas derivados de cambios en el ambiente tecnológico del cliente"
+    ],
+    "supportTitle": "6.2 Soporte Técnico",
+    "supportItems": [
+      "El soporte incluye corrección de errores documentados y asesoría técnica básica",
+      "Tiempo de respuesta: 24-48 horas en días hábiles",
+      "Soporte vía correo electrónico y llamadas telefónicas programadas"
+    ]
+  },
+  "section7": {
+    "title": "7. LIMITACIÓN DE RESPONSABILIDAD",
+    "items": [
+      "La responsabilidad se limita al monto total pagado por el servicio",
+      "No se asume responsabilidad por daños indirectos, lucro cesante o pérdidas de información no atribuibles directamente a defectos en el software desarrollado",
+      "El cliente es responsable de mantener respaldos de su información",
+      "SOFTLOGIC no se hace responsable por interrupciones de servicio causadas por terceros o fuerza mayor"
+    ]
+  },
+  "section8": {
+    "title": "8. CONFIDENCIALIDAD Y PROTECCIÓN DE DATOS",
+    "items": [
+      "Ambas partes se comprometen a mantener confidencialidad sobre información técnica, comercial y estratégica",
+      "Los datos personales serán tratados conforme a la Ley Federal de Protección de Datos Personales",
+      "La información confidencial no podrá ser divulgada por un período de 5 años posterior a la conclusión del proyecto",
+      "Se establecerán medidas de seguridad apropiadas para proteger la información"
+    ]
+  },
+  "section9": {
+    "title": "9. CAMBIOS Y MODIFICACIONES",
+    "items": [
+      "Cualquier modificación debe ser acordada por escrito",
+      "Los cambios en el alcance del proyecto pueden implicar ajustes en tiempo y costo",
+      "Se proporcionará nueva cotización para modificaciones significativas",
+      "Los cambios menores (menos del 10% del valor total) se incluirán sin costo adicional"
+    ]
+  },
+  "section10": {
+    "title": "10. ENTREGA Y ACEPTACIÓN",
+    "items": [
+      "La entrega se considera realizada cuando el software cumple con las especificaciones acordadas",
+      "El cliente tiene 15 días hábiles para realizar observaciones post-entrega",
+      "Sin observaciones en el período establecido, se considera aceptado el entregable",
+      "Las observaciones deben ser específicas, documentadas y relacionadas con las especificaciones originales"
+    ]
+  },
+  "section11": {
+    "title": "11. FUERZA MAYOR",
+    "items": [
+      "Ninguna de las partes será responsable por incumplimiento debido a causas de fuerza mayor",
+      "Se consideran causas de fuerza mayor: desastres naturales, pandemias, actos de autoridad, conflictos bélicos",
+      "La parte afectada deberá notificar por escrito dentro de los 5 días siguientes al evento"
+    ]
+  },
+  "section12": {
+    "title": "12. RESOLUCIÓN DE CONTROVERSIAS",
+    "items": [
+      "Las controversias se resolverán mediante mediación en primera instancia",
+      "En caso de no llegar a acuerdo, se someterán a arbitraje comercial",
+      "Se aplicará la legislación mexicana vigente",
+      "Los tribunales competentes serán los de la Ciudad de México"
+    ]
+  },
+  "section13": {
+    "title": "13. COMUNICACIONES",
+    "items": [
+      "Las comunicaciones oficiales se realizarán al correo: equipo@pixnetmx.com",
+      "Los avisos se consideran entregados al momento de su envío",
+      "Los cambios de datos de contacto deben notificarse por escrito",
+      "Se mantendrá registro de todas las comunicaciones del proyecto"
+    ]
+  },
+  "section14": {
+    "title": "14. DISPOSICIONES GENERALES",
+    "independenceTitle": "14.1 Independencia de Cláusulas",
+    "independenceItems": [
+      "La nulidad de alguna cláusula no afectará la validez del resto del acuerdo",
+      "Las cláusulas nulas serán sustituidas por disposiciones válidas similares"
+    ],
+    "totalityTitle": "14.2 Totalidad del Acuerdo",
+    "totalityItems": [
+      "Estos términos constituyen el acuerdo completo entre las partes",
+      "Prevalecen sobre cualquier comunicación previa oral o escrita",
+      "Solo pueden modificarse mediante acuerdo escrito firmado por ambas partes"
+    ],
+    "assignmentTitle": "14.3 Cesión de Derechos",
+    "assignmentItems": [
+      "Los derechos y obligaciones no podrán cederse sin consentimiento escrito",
+      "SOFTLOGIC podrá subcontratar servicios especializados",
+      "El cliente será notificado de cualquier subcontratación relevante"
+    ]
+  },
+  "section15": {
+    "title": "15. POLÍTICA DE PRIVACIDAD Y COOKIES",
+    "items": [
+      "Los datos recopilados a través del sitio web se utilizan únicamente para prestación de servicios",
+      "Se implementan medidas de seguridad para proteger la información personal",
+      "El sitio web puede utilizar cookies para mejorar la experiencia del usuario",
+      "Los usuarios pueden configurar su navegador para rechazar cookies"
+    ]
+  },
+  "section16": {
+    "title": "16. CONTACTO Y ATENCIÓN AL CLIENTE",
+    "intro": "Para consultas, soporte técnico o aclaraciones:",
+    "items": [
+      "Correo: equipo@pixnetmx.com",
+      "Sitio web: pixnetmx.com",
+      "Horario de atención: Lunes a viernes de 9:00 a 18:00 horas (Tiempo del Centro de México)",
+      "Tiempo de respuesta: 24-48 horas en días hábiles"
+    ]
+  },
+  "lastUpdate": "Fecha de última actualización: Agosto 2026",
+  "acceptance": "Al contratar nuestros servicios, el cliente acepta expresamente estos términos y condiciones."
+},
+"refund": {
+  "title": "Política de reembolsos y devoluciones",
+  "company": "ARC DI TRIOMPHE TECHNOLOGIES, S.A. DE C.V.",
+  "website": "Sitio web: pixnetmx.com",
+  "email": "Correo de contacto: equipo@pixnetmx.com",
+  "address": "Domicilio: Av. Río Consulado Circuito Interior, N°516, Oficina 102, Colonia Tlatilco, Alcaldía Azcapotzalco, C.P. 02860, Ciudad de México",
+  "intro1": "En PIXNETMX valoramos la confianza que nuestros clientes depositan en nosotros y trabajamos para ofrecer servicios de la más alta calidad. Sabemos que pueden surgir situaciones imprevistas, por lo que hemos establecido la presente Política de Reembolsos y Cancelaciones con el objetivo de brindar claridad, transparencia y seguridad en cada proceso.",
+  "intro2": "Aquí encontrarás las condiciones bajo las cuales proceden cancelaciones, reembolsos y retenciones, así como los derechos y responsabilidades tanto del cliente como de PIXNETMX. Nuestro compromiso es atender cada solicitud de manera justa y oportuna, siempre respetando la legislación aplicable y fomentando una relación de confianza a largo plazo.",
+  "section1": {
+    "title": "1. Cancelación por parte del cliente",
+    "content": "El cliente podrá solicitar la cancelación de servicios en cualquier momento. En tales casos:",
+    "items": [
+      "Los reembolsos estarán sujetos al análisis del avance real del proyecto y a los costos ya incurridos.",
+      "Los trabajos efectivamente realizados y entregables parciales podrán ser facturados o retenidos hasta que se liquide cualquier adeudo pendiente.",
+      "Una vez liberados los pagos correspondientes, el cliente tendrá derecho a recibir los avances y documentación generada hasta la fecha."
+    ]
+  },
+  "section2": {
+    "title": "2. Cancelación por parte de PIXNETMX",
+    "content": "PIXNETMX podrá cancelar el servicio en caso de:",
+    "items": [
+      "Incumplimiento de pago por parte del cliente.",
+      "Incumplimiento grave de las obligaciones contractuales asumidas por el cliente.",
+      "Uso indebido de la plataforma o afectación a derechos de terceros."
+    ],
+    "footer": "En estos casos, se retendrán los entregables hasta la liquidación total y no procederán reembolsos por servicios ya prestados."
+  },
+  "section3": {
+    "title": "3. Cancelación por causas de fuerza mayor",
+    "content": "En caso de eventos extraordinarios (desastres naturales, emergencias sanitarias, fallas masivas en infraestructura, actos de autoridad u otras causas fuera del control de las partes), PIXNETMX podrá suspender temporalmente los servicios sin responsabilidad. De persistir la imposibilidad de ejecución, cualquiera de las partes podrá solicitar la terminación definitiva, resolviéndose los pagos y entregables de forma proporcional al avance."
+  },
+  "section4": {
+    "title": "4. Servicios no reembolsables",
+    "content": "No serán sujetos a reembolso:",
+    "items": [
+      "Licencias de software de terceros ya adquiridas.",
+      "Servicios de dominio, hosting o infraestructura tecnológica ya consumidos.",
+      "Consultoría, análisis o asesoría previamente prestada.",
+      "Gastos de terceros previamente autorizados por el cliente."
+    ]
+  },
+  "section5": {
+    "title": "5. Procedimiento para solicitar reembolso",
+    "content": "Toda solicitud deberá enviarse por escrito a equipo@pixnetmx.com e incluir:",
+    "items": [
+      "Nombre del cliente o empresa.",
+      "Proyecto o servicio contratado.",
+      "Motivo de la cancelación.",
+      "Documentación de respaldo, en su caso."
+    ],
+    "footer": "PIXNETMX evaluará cada solicitud de forma individual y comunicará la resolución al cliente por escrito en un plazo máximo de 10 días hábiles, detallando el monto autorizado y el medio de reembolso."
+  },
+  "section6": {
+    "title": "6. Métodos y tiempos de reembolso",
+    "content": "En caso de aprobación, los reembolsos podrán realizarse mediante:",
+    "items": [
+      "Reversión al método de pago original (tarjeta de crédito/débito o transferencia bancaria). Los tiempos de acreditación dependen exclusivamente de la institución bancaria o del emisor de la tarjeta, y pueden variar entre uno y varios ciclos de facturación."
+    ]
+  },
+  "section7": {
+    "title": "7. Propiedad intelectual y entregables",
+    "content": "PIXNETMX conservará todos los derechos sobre metodologías, procesos y know-how propios. El cliente adquirirá la propiedad de los desarrollos realizados específicamente para su proyecto una vez liquidado el pago total correspondiente."
+  },
+  "section8": {
+    "title": "8. Modificaciones de la política",
+    "content": "PIXNETMX se reserva el derecho de modificar en cualquier momento la presente política. Las actualizaciones estarán disponibles permanentemente en el sitio web."
+  },
+  "section9": {
+    "title": "9. Legislación y jurisdicción",
+    "content": "Esta política se rige por la legislación aplicable en los Estados Unidos Mexicanos. Para cualquier controversia, las partes se someten a los tribunales competentes de la Ciudad de México, renunciando expresamente a cualquier otro fuero que pudiera corresponderles."
   }
+},
+"privacyPolicy": {
+  "title": "POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES",
+  "section1": {
+    "title": "I. IDENTIFICACIÓN DEL RESPONSABLE",
+    "items": [
+      "Denominación Social: ARC DI TRIOMPHE TECHNOLOGIES, S.A. DE C.V.",
+      "Nombre Comercial: SoftLogic",
+      "Domicilio: Av. Río Consulado Circuito Interior, N°516, Oficina 102, Colonia Tlatilco, Alcaldía Azcapotzalco, C.P. 02860, Ciudad de México",
+      "Sitio Web: softlogic.com.mx",
+      "Contacto de Privacidad: equipo@softlogic.com.mx",
+      "Actividad Principal: Diseño y desarrollo de software"
+    ]
+  },
+  "section2": {
+    "title": "II. FILOSOFÍA DE PRIVACIDAD",
+    "intro": "En SoftLogic entendemos que sus datos son valiosos y merecen protección. Nuestro compromiso se fundamenta en:",
+    "transparencyTitle": "TRANSPARENCIA REAL",
+    "transparency": "Le explicamos claramente qué datos recopilamos, por qué y cómo los utilizamos, sin términos confusos o ambiguos.",
+    "controlTitle": "CONTROL EFECTIVO",
+    "control": "Usted tiene derecho a decidir sobre el tratamiento de sus datos con opciones claras y accesibles.",
+    "minimizationTitle": "MINIMIZACIÓN DE DATOS",
+    "minimization": "Solo recopilamos la información estrictamente necesaria para brindarle nuestros servicios."
+  },
+  "section3": {
+    "title": "III. TIPOS DE INFORMACIÓN QUE RECOPILAMOS",
+    "contactTitle": "INFORMACIÓN DE CONTACTO",
+    "contactItems": [
+      "Nombre y apellidos",
+      "Correo electrónico",
+      "Empresa y generales (cuando aplique)"
+    ],
+    "projectTitle": "INFORMACIÓN DEL PROYECTO",
+    "projectItems": [
+      "Requerimientos y especificaciones",
+      "Comunicaciones relacionadas con el servicio",
+      "Documentos y archivos compartidos",
+      "Historial de interacciones"
+    ],
+    "technicalTitle": "INFORMACIÓN TÉCNICA",
+    "technicalItems": [
+      "Dirección IP",
+      "Tipo de navegador y dispositivo",
+      "Datos de navegación en nuestro sitio web",
+      "Información de uso de nuestros servicios"
+    ],
+    "commercialTitle": "INFORMACIÓN COMERCIAL",
+    "commercialItems": [
+      "Datos de facturación",
+      "Historial de servicios contratados",
+      "Información de pagos",
+      "Documentación contractual"
+    ]
+  },
+  "section4": {
+    "title": "IV. PARA QUÉ UTILIZAMOS SUS DATOS",
+    "serviceTitle": "PRESTACIÓN DE SERVICIOS",
+    "serviceItems": [
+      "Desarrollar y entregar las soluciones de software solicitadas",
+      "Brindar soporte técnico y mantenimiento",
+      "Comunicarnos sobre el progreso de proyectos",
+      "Resolver dudas y problemas técnicos"
+    ],
+    "managementTitle": "GESTIÓN COMERCIAL",
+    "managementItems": [
+      "Elaborar cotizaciones y propuestas",
+      "Procesar pagos y generar facturas",
+      "Mantener registros contables y fiscales",
+      "Administrar contratos y acuerdos"
+    ],
+    "improvementTitle": "MEJORA DE SERVICIOS",
+    "improvementItems": [
+      "Optimizar la experiencia en nuestro sitio web",
+      "Desarrollar nuevas funcionalidades",
+      "Analizar la calidad de nuestros servicios",
+      "Personalizar nuestras comunicaciones"
+    ],
+    "legalTitle": "CUMPLIMIENTO LEGAL",
+    "legalItems": [
+      "Cumplir con obligaciones fiscales",
+      "Mantener registros requeridos por ley",
+      "Responder a autoridades competentes",
+      "Proteger nuestros derechos legales"
+    ]
+  },
+  "section5": {
+    "title": "V. BASE LEGAL PARA EL TRATAMIENTO",
+    "intro": "Tratamos sus datos personales basándonos en:",
+    "items": [
+      "Su consentimiento: Para comunicaciones promocionales y análisis no esenciales",
+      "Ejecución de contratos: Para cumplir con los servicios contratados",
+      "Interés legítimo: Para mejorar servicios y prevenir fraudes",
+      "Obligaciones legales: Para cumplir con disposiciones fiscales y regulatorias"
+    ]
+  },
+  "section6": {
+    "title": "VI. COMPARTICIÓN DE INFORMACIÓN",
+    "content": "CON TERCEROS AUTORIZADOS",
+    "items": [
+      "Proveedores de servicios tecnológicos que nos ayudan a operar",
+      "Colaboradores técnicos bajo acuerdos de confidencialidad",
+      "Instituciones financieras para procesamiento de pagos",
+      "Autoridades competentes cuando sea requerido por ley"
+    ]
+  },
+  "section7": {
+    "title": "VII. SEGURIDAD DE SUS DATOS",
+    "intro": "Implementamos medidas técnicas y organizacionales apropiadas para proteger su información:",
+    "technicalTitle": "MEDIDAS TÉCNICAS",
+    "technicalItems": [
+      "Cifrado de datos sensibles",
+      "Comunicaciones seguras",
+      "Sistemas de autenticación robustos",
+      "Monitoreo de seguridad continuo"
+    ],
+    "organizationalTitle": "MEDIDAS ORGANIZACIONALES",
+    "organizationalItems": [
+      "Capacitación regular del personal",
+      "Políticas internas de seguridad",
+      "Controles de acceso estrictos",
+      "Procedimientos de respuesta a incidentes"
+    ]
+  },
+  "section8": {
+    "title": "VIII. CONSERVACIÓN DE DATOS",
+    "intro": "Conservamos su información personal únicamente durante el tiempo necesario para:",
+    "items": [
+      "Cumplir con las finalidades para las cuales fue recopilada",
+      "Satisfacer requerimientos legales y fiscales",
+      "Resolver disputas y hacer cumplir nuestros acuerdos"
+    ],
+    "footer": "Los períodos específicos varían según el tipo de información y el propósito, pero generalmente no exceden los plazos establecidos por la legislación aplicable."
+  },
+  "section9": {
+    "title": "IX. SUS DERECHOS COMO TITULAR",
+    "intro": "Conforme a la Ley Federal de Protección de Datos Personales en Posesión de Particulares, usted tiene derecho a:",
+    "items": [
+      "ACCESO: Conocer qué datos personales tenemos sobre usted y las características del tratamiento.",
+      "RECTIFICACIÓN: Solicitar la corrección de datos inexactos o incompletos.",
+      "CANCELACIÓN: Solicitar la eliminación de sus datos cuando considere que no son necesarios.",
+      "OPOSICIÓN: Oponerse al tratamiento de sus datos para fines específicos.",
+      "LIMITACIÓN DEL TRATAMIENTO: Solicitar que limitemos el uso de sus datos en ciertas circunstancias.",
+      "PORTABILIDAD: Recibir sus datos en un formato estructurado y de uso común.",
+      "REVOCACIÓN DEL CONSENTIMIENTO: Retirar su consentimiento en cualquier momento para tratamientos que lo requieran."
+    ]
+  },
+  "section10": {
+    "title": "X. CÓMO EJERCER SUS DERECHOS",
+    "intro": "Para ejercer sus derechos ARCO o presentar cualquier consulta sobre privacidad:",
+    "send": "Envíe su solicitud a: equipo@softlogic.com.mx",
+    "include": "Incluya la siguiente información:",
+    "items": [
+      "Nombre completo y datos de contacto",
+      "Descripción clara de su solicitud",
+      "Documentos que acrediten su identidad",
+      "En su caso, documentos que acrediten la representación legal"
+    ],
+    "footer": "Tiempo de respuesta: Máximo 20 días hábiles"
+  },
+  "section11": {
+    "title": "XI. COOKIES Y TECNOLOGÍAS SIMILARES",
+    "intro": "Nuestro sitio web utiliza cookies y tecnologías similares para:",
+    "items": [
+      "Mejorar la funcionalidad del sitio",
+      "Analizar el uso y rendimiento",
+      "Personalizar su experiencia",
+      "Recordar sus preferencias"
+    ],
+    "footer": "Puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades del sitio."
+  },
+  "section12": {
+    "title": "XII. MENORES DE EDAD",
+    "content": "No recopilamos intencionalmente información personal de menores de 18 años. Si identificamos que hemos recopilado datos de un menor, los eliminaremos inmediatamente."
+  },
+  "section13": {
+    "title": "XIII. CAMBIOS A ESTA POLÍTICA",
+    "intro": "Podemos actualizar esta Política de Privacidad ocasionalmente. Los cambios significativos serán notificados a través de:",
+    "items": [
+      "Nuestro sitio web",
+      "Durante su próxima interacción con nuestros servicios"
+    ],
+    "footer": "La fecha de la última actualización aparece al inicio de este documento."
+  },
+  "section14": {
+    "title": "XIV. AUTORIDAD DE CONTROL",
+    "intro": "Si considera que el tratamiento de sus datos personales viola la legislación aplicable, puede presentar una reclamación ante la Secretaría Anticorrupción y Buen Gobierno (SABG), autoridad que, a partir del 21 de marzo de 2025, asumió las funciones del extinto Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI) en materia de protección de datos personales en posesión de particulares.",
+    "website": "SABG: www.gob.mx/buengobierno"
+  },
+  "section15": {
+    "title": "XV. CONTACTO",
+    "intro": "Para cualquier duda, comentario o solicitud relacionada con esta Política de Privacidad:",
+    "items": [
+      "Correo electrónico: equipo@softlogic.com.mx",
+      "Asunto: Consulta de Privacidad",
+      "Respuesta: Dentro de 5 días hábiles"
+    ]
+  },
+  "footer1": "Esta Política de Privacidad ha sido elaborada conforme a la Ley Federal de Protección de Datos Personales en Posesión de Particulares, su Reglamento y los Lineamientos del Aviso de Privacidad aplicables en los Estados Unidos Mexicanos.",
+  "footer2": "Vigencia: Esta política entra en vigor el 26 de septiembre de 2025."
+}
 }
