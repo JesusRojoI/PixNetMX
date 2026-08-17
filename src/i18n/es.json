@@ -318,7 +318,7 @@
   },
   "section2": {
     "title": "2. OBLIGACIONES DE LAS PARTES",
-    "providerTitle": "Obligaciones del prestador (SOFTLOGIC):",
+    "providerTitle": "Obligaciones del prestador (PIXNET):",
     "providerItems": [
       "Desarrollar el software conforme a especificaciones acordadas",
       "Entregar el proyecto en los plazos establecidos",
@@ -377,7 +377,7 @@
       "La responsabilidad se limita al monto total pagado por el servicio",
       "No se asume responsabilidad por daños indirectos, lucro cesante o pérdidas de información no atribuibles directamente a defectos en el software desarrollado",
       "El cliente es responsable de mantener respaldos de su información",
-      "SOFTLOGIC no se hace responsable por interrupciones de servicio causadas por terceros o fuerza mayor"
+      "PIXNET no se hace responsable por interrupciones de servicio causadas por terceros o fuerza mayor"
     ]
   },
   "section8": {
@@ -449,7 +449,7 @@
     "assignmentTitle": "14.3 Cesión de Derechos",
     "assignmentItems": [
       "Los derechos y obligaciones no podrán cederse sin consentimiento escrito",
-      "SOFTLOGIC podrá subcontratar servicios especializados",
+      "PIXNET podrá subcontratar servicios especializados",
       "El cliente será notificado de cualquier subcontratación relevante"
     ]
   },
@@ -548,21 +548,21 @@
   }
 },
 "privacyPolicy": {
-  "title": "POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES",
+  "title": "Aviso de privacidad",
   "section1": {
     "title": "I. IDENTIFICACIÓN DEL RESPONSABLE",
     "items": [
       "Denominación Social: ARC DI TRIOMPHE TECHNOLOGIES, S.A. DE C.V.",
-      "Nombre Comercial: SoftLogic",
+      "Nombre Comercial: PixNetMX",
       "Domicilio: Av. Río Consulado Circuito Interior, N°516, Oficina 102, Colonia Tlatilco, Alcaldía Azcapotzalco, C.P. 02860, Ciudad de México",
-      "Sitio Web: softlogic.com.mx",
-      "Contacto de Privacidad: equipo@softlogic.com.mx",
+      "Sitio Web: pixnetmx.com",
+      "Contacto de Privacidad: equipo@pixnetmx.com",
       "Actividad Principal: Diseño y desarrollo de software"
     ]
   },
   "section2": {
     "title": "II. FILOSOFÍA DE PRIVACIDAD",
-    "intro": "En SoftLogic entendemos que sus datos son valiosos y merecen protección. Nuestro compromiso se fundamenta en:",
+    "intro": "En PixNetMX entendemos que sus datos son valiosos y merecen protección. Nuestro compromiso se fundamenta en:",
     "transparencyTitle": "TRANSPARENCIA REAL",
     "transparency": "Le explicamos claramente qué datos recopilamos, por qué y cómo los utilizamos, sin términos confusos o ambiguos.",
     "controlTitle": "CONTROL EFECTIVO",
@@ -695,7 +695,7 @@
   "section10": {
     "title": "X. CÓMO EJERCER SUS DERECHOS",
     "intro": "Para ejercer sus derechos ARCO o presentar cualquier consulta sobre privacidad:",
-    "send": "Envíe su solicitud a: equipo@softlogic.com.mx",
+    "send": "Envíe su solicitud a: equipo@pixnetmx.com",
     "include": "Incluya la siguiente información:",
     "items": [
       "Nombre completo y datos de contacto",
@@ -738,12 +738,13 @@
     "title": "XV. CONTACTO",
     "intro": "Para cualquier duda, comentario o solicitud relacionada con esta Política de Privacidad:",
     "items": [
-      "Correo electrónico: equipo@softlogic.com.mx",
+      "Correo electrónico: equipo@pixnetmx.com",
       "Asunto: Consulta de Privacidad",
       "Respuesta: Dentro de 5 días hábiles"
     ]
   },
   "footer1": "Esta Política de Privacidad ha sido elaborada conforme a la Ley Federal de Protección de Datos Personales en Posesión de Particulares, su Reglamento y los Lineamientos del Aviso de Privacidad aplicables en los Estados Unidos Mexicanos.",
-  "footer2": "Vigencia: Esta política entra en vigor el 26 de septiembre de 2025."
+  "footer2": "Vigencia: Esta política entra en vigor el 12 de Agosto de 2026."
 }
+
 }
