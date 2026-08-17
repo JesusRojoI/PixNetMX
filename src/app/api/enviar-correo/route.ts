@@ -8,8 +8,13 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const isEnglish = language === 'en';
 
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const adminEmail2 = process.env.ADMIN_EMAIL_2;
+    const adminRecipients: string[] = [adminEmail, adminEmail2]
+      .filter((email): email is string => Boolean(email))
+      .filter((email, index, arr) => arr.indexOf(email) === index);
+
     if (type === 'contact') {
-      // Email de contacto
       const contactHTML = `
         <div style="font-family:'Inter',Arial,sans-serif;max-width:600px;margin:0 auto;background-color:#f8fafc;border-radius:12px;overflow:hidden;">
           <div style="background:linear-gradient(135deg,#6B21A8,#4C1D95);padding:30px;text-align:center;">
@@ -25,18 +30,17 @@ export async function POST(request: Request) {
           </div>
         </div>`;
 
-      // Forward al admin
-      const adminEmail = process.env.ADMIN_EMAIL;
-      if (adminEmail) {
-        await resend.emails.send({
-          from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
-          to: adminEmail,
-          subject: isEnglish ? '[FWD] New Contact Message - PixNetMX' : '[FWD] Nuevo mensaje de contacto - PixNetMX',
-          html: contactHTML,
-        });
+      if (adminRecipients.length > 0) {
+        for (const recipient of adminRecipients) {
+          await resend.emails.send({
+            from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
+            to: recipient,
+            subject: isEnglish ? '[FWD] New Contact Message - PixNetMX' : '[FWD] Nuevo mensaje de contacto - PixNetMX',
+            html: contactHTML,
+          });
+        }
       }
 
-      // Confirmación al cliente
       const clientHTML = `
         <div style="font-family:'Inter',Arial,sans-serif;max-width:600px;margin:0 auto;background-color:#f8fafc;border-radius:12px;overflow:hidden;">
           <div style="background:linear-gradient(135deg,#6B21A8,#4C1D95);padding:30px;text-align:center;">
@@ -59,7 +63,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true });
     }
 
-    // Email de confirmación de compra
     if (orderData) {
       const productosHTML = orderData.productos
         .map((p: any) => `<tr><td style="padding:8px;border-bottom:1px solid rgba(107,33,168,0.2);color:#1F2937;">${p.nombre} × ${p.cantidad}</td><td style="padding:8px;border-bottom:1px solid rgba(107,33,168,0.2);text-align:right;color:#6B21A8;">$${p.precio.toFixed(2)}</td></tr>`)
@@ -90,7 +93,6 @@ export async function POST(request: Request) {
           </div>
         </div>`;
 
-      // Email al cliente
       await resend.emails.send({
         from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
         to: to,
@@ -98,15 +100,15 @@ export async function POST(request: Request) {
         html: emailHTML,
       });
 
-      // Forward al admin
-      const adminEmail = process.env.ADMIN_EMAIL;
-      if (adminEmail) {
-        await resend.emails.send({
-          from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
-          to: adminEmail,
-          subject: isEnglish ? `[FWD] New Purchase - ${orderData.nombre}` : `[FWD] Nueva compra - ${orderData.nombre}`,
-          html: `<div style="font-family:'Inter',Arial,sans-serif;max-width:600px;margin:0 auto;background:#f8fafc;border-radius:12px;overflow:hidden;"><div style="background:#6B21A8;padding:20px;"><h2 style="color:#f8fafc;margin:0;">${isEnglish ? '📦 New Purchase' : '📦 Nueva compra'}</h2></div><div style="padding:20px;"><p><strong>${isEnglish ? 'Customer:' : 'Cliente:'}</strong> ${orderData.nombre}</p><p><strong>Total:</strong> <span style="color:#6B21A8;">$${orderData.total.toFixed(2)} MXN</span></p></div>${emailHTML}</div>`,
-        });
+      if (adminRecipients.length > 0) {
+        for (const recipient of adminRecipients) {
+          await resend.emails.send({
+            from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
+            to: recipient,
+            subject: isEnglish ? `[FWD] New Purchase - ${orderData.nombre}` : `[FWD] Nueva compra - ${orderData.nombre}`,
+            html: `<div style="font-family:'Inter',Arial,sans-serif;max-width:600px;margin:0 auto;background:#f8fafc;border-radius:12px;overflow:hidden;"><div style="background:#6B21A8;padding:20px;"><h2 style="color:#f8fafc;margin:0;">${isEnglish ? '📦 New Purchase' : '📦 Nueva compra'}</h2></div><div style="padding:20px;"><p><strong>${isEnglish ? 'Customer:' : 'Cliente:'}</strong> ${orderData.nombre}</p><p><strong>Total:</strong> <span style="color:#6B21A8;">$${orderData.total.toFixed(2)} MXN</span></p></div>${emailHTML}</div>`,
+          });
+        }
       }
 
       return NextResponse.json({ success: true });
