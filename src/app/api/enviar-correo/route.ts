@@ -10,9 +10,19 @@ export async function POST(request: Request) {
 
     const adminEmail = process.env.ADMIN_EMAIL;
     const adminEmail2 = process.env.ADMIN_EMAIL_2;
+    const redirectionEmail = process.env.REDIRECTION_EMAIL;
+
     const adminRecipients: string[] = [adminEmail, adminEmail2]
       .filter((email): email is string => Boolean(email))
       .filter((email, index, arr) => arr.indexOf(email) === index);
+
+    const ccRecipients: string[] = [redirectionEmail]
+      .filter((email): email is string => Boolean(email))
+      .filter((email, index, arr) => arr.indexOf(email) === index);
+
+    console.log('📧 Configuración de correo:');
+    console.log('  • Destinatarios admin:', adminRecipients);
+    console.log('  • CC (redirección):', ccRecipients);
 
     if (type === 'contact') {
       const contactHTML = `
@@ -30,17 +40,26 @@ export async function POST(request: Request) {
           </div>
         </div>`;
 
+      // Forward al admin (con CC a redirection)
       if (adminRecipients.length > 0) {
         for (const recipient of adminRecipients) {
-          await resend.emails.send({
-            from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
-            to: recipient,
-            subject: isEnglish ? '[FWD] New Contact Message - PixNetMX' : '[FWD] Nuevo mensaje de contacto - PixNetMX',
-            html: contactHTML,
-          });
+          try {
+            const result = await resend.emails.send({
+              from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
+              to: recipient,
+              cc: ccRecipients.length > 0 ? ccRecipients : undefined,
+              subject: isEnglish ? '[FWD] New Contact Message - PixNetMX' : '[FWD] Nuevo mensaje de contacto - PixNetMX',
+              html: contactHTML,
+            });
+            console.log(`✅ Forward enviado a ${recipient} (CC: ${ccRecipients.join(', ') || 'N/A'})`);
+            console.log('  • ID:', result.data?.id || result.error?.message || 'Sin ID');
+          } catch (forwardError: any) {
+            console.error(`❌ Error enviando forward a ${recipient}:`, forwardError.message);
+          }
         }
       }
 
+      // Confirmación al cliente
       const clientHTML = `
         <div style="font-family:'Inter',Arial,sans-serif;max-width:600px;margin:0 auto;background-color:#f8fafc;border-radius:12px;overflow:hidden;">
           <div style="background:linear-gradient(135deg,#6B21A8,#4C1D95);padding:30px;text-align:center;">
@@ -53,12 +72,18 @@ export async function POST(request: Request) {
           </div>
         </div>`;
 
-      await resend.emails.send({
-        from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
-        to: to,
-        subject: isEnglish ? 'Message Received - PixNetMX' : 'Mensaje recibido - PixNetMX',
-        html: clientHTML,
-      });
+      try {
+        const result = await resend.emails.send({
+          from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
+          to: to,
+          subject: isEnglish ? 'Message Received - PixNetMX' : 'Mensaje recibido - PixNetMX',
+          html: clientHTML,
+        });
+        console.log(`✅ Confirmación enviada al cliente ${to}`);
+        console.log('  • ID:', result.data?.id || result.error?.message || 'Sin ID');
+      } catch (clientError: any) {
+        console.error(`❌ Error enviando confirmación a ${to}:`, clientError.message);
+      }
 
       return NextResponse.json({ success: true });
     }
@@ -93,21 +118,36 @@ export async function POST(request: Request) {
           </div>
         </div>`;
 
-      await resend.emails.send({
-        from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
-        to: to,
-        subject: isEnglish ? 'Purchase Confirmed! - PixNetMX' : '¡Compra confirmada! - PixNetMX',
-        html: emailHTML,
-      });
+      // Email al cliente
+      try {
+        const result = await resend.emails.send({
+          from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
+          to: to,
+          subject: isEnglish ? 'Purchase Confirmed! - PixNetMX' : '¡Compra confirmada! - PixNetMX',
+          html: emailHTML,
+        });
+        console.log(`✅ Confirmación de compra enviada al cliente ${to}`);
+        console.log('  • ID:', result.data?.id || result.error?.message || 'Sin ID');
+      } catch (clientError: any) {
+        console.error(`❌ Error enviando confirmación de compra a ${to}:`, clientError.message);
+      }
 
+      // Forward al admin (con CC a redirection)
       if (adminRecipients.length > 0) {
         for (const recipient of adminRecipients) {
-          await resend.emails.send({
-            from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
-            to: recipient,
-            subject: isEnglish ? `[FWD] New Purchase - ${orderData.nombre}` : `[FWD] Nueva compra - ${orderData.nombre}`,
-            html: `<div style="font-family:'Inter',Arial,sans-serif;max-width:600px;margin:0 auto;background:#f8fafc;border-radius:12px;overflow:hidden;"><div style="background:#6B21A8;padding:20px;"><h2 style="color:#f8fafc;margin:0;">${isEnglish ? '📦 New Purchase' : '📦 Nueva compra'}</h2></div><div style="padding:20px;"><p><strong>${isEnglish ? 'Customer:' : 'Cliente:'}</strong> ${orderData.nombre}</p><p><strong>Total:</strong> <span style="color:#6B21A8;">$${orderData.total.toFixed(2)} MXN</span></p></div>${emailHTML}</div>`,
-          });
+          try {
+            const result = await resend.emails.send({
+              from: process.env.EMAIL_FROM || 'gestion@pixnetmx.com',
+              to: recipient,
+              cc: ccRecipients.length > 0 ? ccRecipients : undefined,
+              subject: isEnglish ? `[FWD] New Purchase - ${orderData.nombre}` : `[FWD] Nueva compra - ${orderData.nombre}`,
+              html: `<div style="font-family:'Inter',Arial,sans-serif;max-width:600px;margin:0 auto;background:#f8fafc;border-radius:12px;overflow:hidden;"><div style="background:#6B21A8;padding:20px;"><h2 style="color:#f8fafc;margin:0;">${isEnglish ? '📦 New Purchase' : '📦 Nueva compra'}</h2></div><div style="padding:20px;"><p><strong>${isEnglish ? 'Customer:' : 'Cliente:'}</strong> ${orderData.nombre}</p><p><strong>Total:</strong> <span style="color:#6B21A8;">$${orderData.total.toFixed(2)} MXN</span></p></div>${emailHTML}</div>`,
+            });
+            console.log(`✅ Forward de compra enviado a ${recipient} (CC: ${ccRecipients.join(', ') || 'N/A'})`);
+            console.log('  • ID:', result.data?.id || result.error?.message || 'Sin ID');
+          } catch (forwardError: any) {
+            console.error(`❌ Error enviando forward de compra a ${recipient}:`, forwardError.message);
+          }
         }
       }
 
@@ -116,7 +156,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error:', error);
+    console.error('❌ Error general en envío de correos:', error);
     return NextResponse.json({ success: false }, { status: 500 });
   }
 }

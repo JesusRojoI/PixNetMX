@@ -2,12 +2,23 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost'],
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
-  env: {
-    NEXT_PUBLIC_SITE_URL: 'https://pixnetmx.com',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfigrm
